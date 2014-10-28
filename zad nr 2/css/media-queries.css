@@ -1,0 +1,225 @@
+/* view tablet */
+@media all and (max-width: 1049px) and (min-width: 700px) {
+
+    /* -------------------*/
+    /* ----- header ----- */
+    /* -------------------*/
+
+    header.main-header {     
+        height: 170px;
+    }
+    header .header-bar {
+        width: auto;
+        max-width: 990px;
+    }
+    header .header-bar h1.main-logo {
+        margin-left: 50px;
+    }
+    header .header-bar nav {
+        float: none;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 130px;
+    }
+    header .header-bar form {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    /* --------------------*/
+    /* ----- content ----- */
+    /* --------------------*/
+
+    .content {
+        max-width: auto;
+    }
+    .content .category .category-name {
+        text-align: center;
+    }
+    .content .games {
+        text-align: center;
+    }
+    .content .games .game-content {
+        margin: 0 8px;
+        margin-top: 16px;
+        display: inline-block;
+        text-align: left;
+        float: none;
+    }
+    .content .games .game-content:nth-child(3n+1) {
+        margin-right: 10px;
+    }
+
+    /* -------------------*/
+    /* ----- footer ----- */
+    /* -------------------*/
+
+    footer .left-element {
+        margin: 50px 0 0 50px;
+    }
+    footer .right-element {
+        margin: 50px 50px 0 0;
+    }
+
+} /* end view tablet */
+
+#menu {
+    display: none;
+}
+
+/* view smartphone */
+@media all and (max-width: 699px) {
+
+
+    /* -------------------*/
+    /* ----- header ----- */
+    /* -------------------*/
+
+    header.main-header {
+        height: auto;
+        min-height: 120px;
+        padding-top: 30px;
+        overflow: hidden;
+    }
+    header .header-bar {
+        width: auto;
+    }
+    header .header-bar a.logo-main {
+        width: 220px;
+        height: 28px;
+        margin: 0 auto;
+        display: block;
+    }
+    header .header-bar h1.main-logo {
+        float: none;
+        margin-top: 0;
+    }
+    header .header-bar nav {
+        text-align: center;
+        float: none;
+        width: auto;
+        margin-top: 0px;
+    }
+
+    header .header-bar nav ul {
+        width:100%;
+        margin-top: 20px;
+    }
+    header .header-bar nav ul li {
+        width:100%;
+        float:left;
+        display: relative;
+    }
+    header .header-bar nav ul li a {
+        display: block;
+        width: 100%;
+        color: #2c3e50;
+        padding: 15px 0;
+        font-size: 18px;
+        text-align: center;
+        -webkit-transition: none;
+        transition: none;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+    }
+    header .header-bar nav ul li a:hover {
+        background-color: #fff;
+        color: #0096ff;
+    }
+    header .header-bar nav #menu {
+        width: 40px;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin: -30px 0 0 2%;
+        color: #343740;
+        float: none;
+    }
+    header nav #nav.js {
+        display: none;
+    }
+
+    header .header-bar form {
+        clear: left;        
+        float: right;
+        margin-bottom: 30px;
+    }
+    .content .games .game-content .dark .height-p {
+        height: 52%;    
+    }
+
+
+
+    /* --------------------*/
+    /* ----- content ----- */
+    /* --------------------*/
+
+    .content {
+        clear: both;
+    }
+    .content .category .category-name {
+        text-align: center;
+    }
+    .content .games {
+        text-align: center;
+    }
+    .content .games .game-content {
+        display: inline-block;
+        text-align: left;
+        margin: 16px 10px 0 10px;
+        position: relative;
+        max-width: 80%;
+        height: auto;
+        float: none;
+    }
+    .dark {
+        padding: 23px;
+        overflow: hidden;
+    }
+    .content .games figure > img {
+        max-width: 100%;
+        height: auto;
+    }
+    .content .games .game-button {
+        background: none repeat scroll 0 0 #fff;
+        border-radius: 9px;
+        bottom: 22px;
+        font-family: "roboto_condensedregular";
+        font-size: 15px;
+        font-weight: bolder;
+        left: 22px;
+        padding-right: 24px;
+        position: absolute;
+        text-transform: uppercase;
+    }
+    .game-button span {
+        bottom: 2px;
+        position: absolute;
+        right: 9px;
+    }
+    .content .games .game-content:nth-child(3n+1) {
+        margin-right: 10px;
+    }
+
+
+
+    /* -------------------*/
+    /* ----- footer ----- */
+    /* -------------------*/
+
+    footer .left-element {
+        float: none;
+        text-align: center;
+        margin: 30px 0 10px 0;
+    }
+    footer .right-element {
+        float: none;
+        text-align: center;
+        margin-top: 0;
+    }
+
+
+} /* end view smartphone */
+
