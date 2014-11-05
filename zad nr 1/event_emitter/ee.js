@@ -7,23 +7,24 @@
 
     EE = function () {
         //store the listeners somewhere
-        this.listeners = [];
+        this.listeners = {};
     };
 
     EE.prototype.on = function (eventName, listener, context) {
         if (!this.listeners[eventName]) {
             this.listeners[eventName] = {
-                tab: [],
-                con: null
+                tab: []
             };
         }
-        this.listeners[eventName].tab.push(listener);
-        this.listeners[eventName].con = context;
+        this.listeners[eventName].tab.push({
+            listener: listener,
+            con: context
+        });
 
         return function () {
             var helper = -1;
-            for (var i = 0; i < this.listeners[eventName].tab.length; ++i) {
-                if (this.listeners[eventName].tab[i] === listener) {
+            for (var i=0; i < this.listeners[eventName].tab.length; ++i) {
+                if (this.listeners[eventName].tab[i].listener === listener) {
                     helper = i;
                     break;
                 }
@@ -41,8 +42,8 @@
         for (var i = 1; i < arguments.length; ++i) {
             argumenty.push(arguments[i]);
         }
-        for (var i = 0; i < helper.length; ++i) {
-            helper[i].apply(this.listeners[eventName].con, argumenty);
+        for (var i=0; i<helper.length; ++i) {
+            helper[i].listener.apply(helper[i].con, argumenty);
         }
     };
 
