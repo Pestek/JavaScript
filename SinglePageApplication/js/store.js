@@ -1,5 +1,5 @@
 UAM.Store = function () {
-    UAM.EventEmitter.call(this);
+    UAM.EventEmitter.call(this);//wlasciwosci
     this.data = [];
 };
 
@@ -10,11 +10,10 @@ UAM.Store.prototype.add = function (data) {
         data: data,
         active: false
     });
+    this.emit("add",data);
 };
 
 UAM.Store.prototype.update = function (id, data) {
 // for what? what does it have to do?
     this.data[id].data  = data;
-    
-
 };

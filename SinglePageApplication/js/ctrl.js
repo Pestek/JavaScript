@@ -1,22 +1,22 @@
-function UAM.InputCtrl(inputView, store){
+UAM.InputCtrl = function (inputView, store){
 
-    this.view = inputView; 
-    this.model = store;
-    
-    
-    var name = InputView.get();
-    store.emit("add",name);
-
-}
-
-
-
-function UAM.ListCtrl(inputView, store){
-    
+    inputView.on("clickBtn",function(name){
+        store.add(name);
+    });
     
 }
 
-function UAM.FooterCtrl(inputView, store){
+
+
+UAM.ListCtrl = function (listView, store){
+    
+    store.on("add",function(data){
+        listView.addNewListElement(data);
+    });
+    
+}
+
+UAM.FooterCtrl = function (inputView, store){
     
     
 }
